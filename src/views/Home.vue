@@ -13,13 +13,13 @@ import Gallery from '@/components/Gallery.vue';
 export default {
   name: 'home',
   components: {
-    Gallery
+    Gallery,
   },
 };
 </script>
 
 
 <style lang="sass" scoped>
-  .home 
+  .home
     padding: 100px 0
 </style>

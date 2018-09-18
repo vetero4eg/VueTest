@@ -14,55 +14,55 @@
 </template>
 
 <script>
-    import { Carousel, Slide } from 'vue-carousel';
+import { Carousel, Slide } from 'vue-carousel';
 
-    export default {
-        name: 'Gallery', 
-        props: {
-            count: {
-                type: Number,
-                default: 12 //ограничиваем количество "прилетевших" фото
-            },
+export default {
+  name: 'Gallery',
+  props: {
+    count: {
+      type: Number,
+      default: 12, // ограничиваем количество "прилетевших" фото
+    },
 
-        },
-        computed: {
-            images() {
-                return this.$store.state.images.slice(0, this.count);
-            },
-        },
-        components: {
-            Carousel,
-            Slide,
-        }
-    }
+  },
+  computed: {
+    images() {
+      return this.$store.state.images.slice(0, this.count);
+    },
+  },
+  components: {
+    Carousel,
+    Slide,
+  },
+};
 </script>
 
 <style lang='sass' scoped>
-    .slider 
+    .slider
         width: 100%
         padding: 30px 0
-        &__item 
+        &__item
             display: block
             width: 30%
             padding: 15px
         &__img
-            display: block 
+            display: block
             width: 100%
-            height: auto 
+            height: auto
             object-fit: contain
-            transition: all .3s ease 
+            transition: all .3s ease
             &:hover,
-            &:focus 
+            &:focus
                 transform: scale(1.1, 1.1)
                 box-shadow: 0 0 5px 1px rgba(0, 0, 0, .5)
 
     @media screen and (max-width: 768px)
         .slider
-            &__item 
-                width: 45% 
+            &__item
+                width: 45%
     @media screen and (max-width: 425px)
         .slider
-            &__item 
+            &__item
                 width: 100%
 
 </style>

@@ -13,7 +13,7 @@ import Feedback from '@/components/Feedback.vue';
 export default {
   name: 'contact',
   components: {
-    Feedback
+    Feedback,
   },
 
 };

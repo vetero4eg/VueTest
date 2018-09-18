@@ -18,46 +18,46 @@
 
 <script>
 
-  export default {
-    name: 'FullImage',
-    data() {
-        return {
-            id: this.$route.params.id,
+export default {
+  name: 'FullImage',
+  data() {
+    return {
+      id: this.$route.params.id,
 
-        };
+    };
+  },
+  computed: {
+    image() {
+      return this.$store.getters.getSelectImg(this.id);
     },
-    computed: {
-        image() {
-            return this.$store.getters.getSelectImg(this.id);
-        },
+  },
+  methods: {
+    backHome() {
+      this.$router.push('/');
     },
-    methods: {
-        backHome() {
-            this.$router.push('/');
-        },
-    },
-  };
+  },
+};
 </script>
 
 <style lang="sass" scoped>
-    .fullimage 
-        &__item 
-            width: 80% 
-            margin: 0 auto 
+    .fullimage
+        &__item
+            width: 80%
+            margin: 0 auto
             padding: 10px
             box-shadow: 0 0 5px 1px rgba(0, 0, 0, .5)
-            img 
-                width: 100% 
-                height: auto 
+            img
+                width: 100%
+                height: auto
                 object-fit: contain
-        &__buttons 
-            display: flex 
-            width: 100% 
+        &__buttons
+            display: flex
+            width: 100%
             margin: 20px auto
-            flex-direction: row 
-            flex-wrap: wrap 
-            align-item: center 
+            flex-direction: row
+            flex-wrap: wrap
+            align-item: center
             justify-content: center
 
-        
+
 </style>
