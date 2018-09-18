@@ -1,5 +1,3 @@
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production' ?
-    '/VueTest/':
-    '/'
-},
+  baseUrl: process.env.NODE_ENV === 'production' ? '/VueTest/' : '/',
+};
