@@ -16,6 +16,6 @@ git commit -m 'deploy'
 
 
 # если вы публикуете по адресу https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:vetero4eg/Demo/VueDemo.git master:gh-pages
+git push -f git@github.com:vetero4eg/VueTest.git master:gh-pages
 
 cd -
